@@ -1,0 +1,12 @@
+<mat-card class="mb-4">
+    <mat-card-title>{{blog.title}}</mat-card-title>
+    <mat-card-content>
+        <p>{{blog.content}}</p>
+        <strong>{{blog.author}}</strong>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions class="d-flex justify-content-between">
+        <button (click)="onEditBlog()" mat-raised-button color="primary">Edit</button>
+        <button (click)="onRemoveBlog()" mat-raised-button color="warn">Delete</button>
+    </mat-card-actions>
+</mat-card>

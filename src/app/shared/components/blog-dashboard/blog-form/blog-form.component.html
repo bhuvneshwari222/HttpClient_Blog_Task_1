@@ -1,0 +1,15 @@
+<h2 class="text-center">{{isInEditMode ? 'Update Blog' : 'Add Blog'}}</h2>
+<form [formGroup]="blogsForm" (ngSubmit)="onSubmitBlog()">
+    <mat-form-field class="w-100">
+        <input matInput placeholder="Title" formControlName="title" type="text">
+    </mat-form-field>
+    <mat-form-field class="w-100">
+        <textarea matInput placeholder="Content" formControlName="content" rows="4"></textarea>
+    </mat-form-field>
+    <mat-form-field class="w-100">
+        <input matInput placeholder="Author" formControlName="author" type="text">
+    </mat-form-field>
+    <button type="submit" *ngIf="!isInEditMode" class="mr-3" mat-raised-button color="primary">Add Blog</button>
+    <button (click)="onUpdateBlog()" type="button" *ngIf="isInEditMode" class="mr-3" mat-raised-button color="primary">Update Blog</button>
+    <button (click)="onCancel()" type="button" mat-raised-button color="warn">Cancel</button>
+</form>
