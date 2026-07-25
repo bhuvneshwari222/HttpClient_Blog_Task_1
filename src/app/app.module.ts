@@ -57,7 +57,6 @@ import { SpinnerInterceptor } from './shared/interceptor/spinner.interceptor';
     MatListModule,
     MatSidenavModule,
     AppRoutingModule,
-    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule
   ],

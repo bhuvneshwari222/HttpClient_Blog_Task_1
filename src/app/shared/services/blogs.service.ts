@@ -33,12 +33,12 @@ export class BlogsService {
   }
 
   updateBlog(updatedBlog: Iblogs): Observable<any>{
-    let UPDATED_BLOG_URL = `${this.BASE_URL}/blogs/${updatedBlog.id}.json`;
+    let UPDATED_BLOG_URL = `${this.BASE_URL}/BLOGS/${updatedBlog.id}.json`;
     return this._http.patch(UPDATED_BLOG_URL, updatedBlog);
   }
 
   removeBlog(id: string): Observable<any>{
-    let REMOVE_URL = `${this.BASE_URL}/blogs/${id}.json`;
+    let REMOVE_URL = `${this.BASE_URL}/BLOGS/${id}.json`;
     return this._http.delete(REMOVE_URL);
   }
 }
