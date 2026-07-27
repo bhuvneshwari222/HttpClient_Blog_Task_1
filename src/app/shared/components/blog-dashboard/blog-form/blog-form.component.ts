@@ -64,7 +64,7 @@ export class BlogFormComponent implements OnInit {
     if (this.blogsForm.invalid) {
       return this.blogsForm.markAllAsTouched();
     } else {
-      let updatedBlog: Iblogs = this.blogsForm.value;
+      let updatedBlog: Iblogs = { ...this.blogsForm.value, id: this.editBlogsData.id };
       this._blogService.updateBlog(updatedBlog)
         .subscribe({
           next: resp => {
